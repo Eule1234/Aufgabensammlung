@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 18
-VisualStudioVersion = 18.9.12120.119 stable
+VisualStudioVersion = 18.9.12120.119
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld", "HelloWorld\HelloWorld.csproj", "{63F2B11C-657F-4C69-B682-BA425400DC2B}"
 EndProject
@@ -34,6 +34,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aufgabe14_Schaltjahr", "Aufgabe14_Schaltjahr\Aufgabe14_Schaltjahr.csproj", "{345F35C4-6533-4E7F-871D-73A052B473DA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aufgaben15_TannenbaumZeichnen", "Aufgaben15_TannenbaumZeichnen\Aufgaben15_TannenbaumZeichnen.csproj", "{1411A7C6-76C8-453C-ABDE-92901B36019A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aufgabe16_ZahlenRaten", "Aufgabe16_ZahlenRaten\Aufgabe16_ZahlenRaten.csproj", "{4E01BA6C-FC0F-45C2-BA8B-E20E07AC5D27}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -105,6 +107,10 @@ Global
 		{1411A7C6-76C8-453C-ABDE-92901B36019A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1411A7C6-76C8-453C-ABDE-92901B36019A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1411A7C6-76C8-453C-ABDE-92901B36019A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E01BA6C-FC0F-45C2-BA8B-E20E07AC5D27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E01BA6C-FC0F-45C2-BA8B-E20E07AC5D27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E01BA6C-FC0F-45C2-BA8B-E20E07AC5D27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E01BA6C-FC0F-45C2-BA8B-E20E07AC5D27}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
