@@ -37,6 +37,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aufgaben15_TannenbaumZeichn
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aufgabe16_ZahlenRaten", "Aufgabe16_ZahlenRaten\Aufgabe16_ZahlenRaten.csproj", "{4E01BA6C-FC0F-45C2-BA8B-E20E07AC5D27}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aufgabe17_ArraySortieren", "Aufgabe17_ArraySortieren\Aufgabe17_ArraySortieren.csproj", "{C71C13BE-A1B7-491D-AA64-FD8708D042F6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +113,10 @@ Global
 		{4E01BA6C-FC0F-45C2-BA8B-E20E07AC5D27}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E01BA6C-FC0F-45C2-BA8B-E20E07AC5D27}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E01BA6C-FC0F-45C2-BA8B-E20E07AC5D27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C71C13BE-A1B7-491D-AA64-FD8708D042F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C71C13BE-A1B7-491D-AA64-FD8708D042F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C71C13BE-A1B7-491D-AA64-FD8708D042F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C71C13BE-A1B7-491D-AA64-FD8708D042F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
