@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aufgabe13_EineDiagonaleLini
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aufgabe14_Schaltjahr", "Aufgabe14_Schaltjahr\Aufgabe14_Schaltjahr.csproj", "{345F35C4-6533-4E7F-871D-73A052B473DA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aufgaben15_TannenbaumZeichnen", "Aufgaben15_TannenbaumZeichnen\Aufgaben15_TannenbaumZeichnen.csproj", "{1411A7C6-76C8-453C-ABDE-92901B36019A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{345F35C4-6533-4E7F-871D-73A052B473DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{345F35C4-6533-4E7F-871D-73A052B473DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{345F35C4-6533-4E7F-871D-73A052B473DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1411A7C6-76C8-453C-ABDE-92901B36019A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1411A7C6-76C8-453C-ABDE-92901B36019A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1411A7C6-76C8-453C-ABDE-92901B36019A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1411A7C6-76C8-453C-ABDE-92901B36019A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
