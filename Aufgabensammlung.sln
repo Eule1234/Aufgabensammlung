@@ -43,6 +43,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aufgabe18_AlterBerechnen", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aufgabe19_VokaleZählen", "Aufgabe19_VokabelnZählen\Aufgabe19_VokaleZählen.csproj", "{03E8E2D5-D043-484D-B43A-BD5244E63C10}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aufgabe20_Rechner", "Aufgabe20_Rechner\Aufgabe20_Rechner.csproj", "{49A0F8AE-F1CC-47F8-9F83-5FDE488DAE91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kür_Memory", "Kür_Memory\Kür_Memory.csproj", "{F8EDADD1-8FF9-41BB-83D3-45855D867B61}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -129,6 +133,14 @@ Global
 		{03E8E2D5-D043-484D-B43A-BD5244E63C10}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03E8E2D5-D043-484D-B43A-BD5244E63C10}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03E8E2D5-D043-484D-B43A-BD5244E63C10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49A0F8AE-F1CC-47F8-9F83-5FDE488DAE91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49A0F8AE-F1CC-47F8-9F83-5FDE488DAE91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49A0F8AE-F1CC-47F8-9F83-5FDE488DAE91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49A0F8AE-F1CC-47F8-9F83-5FDE488DAE91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8EDADD1-8FF9-41BB-83D3-45855D867B61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8EDADD1-8FF9-41BB-83D3-45855D867B61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8EDADD1-8FF9-41BB-83D3-45855D867B61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8EDADD1-8FF9-41BB-83D3-45855D867B61}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
