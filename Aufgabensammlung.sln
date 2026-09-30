@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aufgabe17_ArraySortieren", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aufgabe18_AlterBerechnen", "Aufgabe18_AlterBerechnen\Aufgabe18_AlterBerechnen.csproj", "{44C85B2B-B8A2-4DFD-8715-4594C4BD22FE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aufgabe19_VokaleZählen", "Aufgabe19_VokabelnZählen\Aufgabe19_VokaleZählen.csproj", "{03E8E2D5-D043-484D-B43A-BD5244E63C10}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -123,6 +125,10 @@ Global
 		{44C85B2B-B8A2-4DFD-8715-4594C4BD22FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44C85B2B-B8A2-4DFD-8715-4594C4BD22FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44C85B2B-B8A2-4DFD-8715-4594C4BD22FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03E8E2D5-D043-484D-B43A-BD5244E63C10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03E8E2D5-D043-484D-B43A-BD5244E63C10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03E8E2D5-D043-484D-B43A-BD5244E63C10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03E8E2D5-D043-484D-B43A-BD5244E63C10}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
