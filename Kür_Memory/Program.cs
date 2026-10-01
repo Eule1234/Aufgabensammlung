@@ -12,8 +12,8 @@ namespace Kür_Memory
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
             string continiue = "y";
-            Console.WriteLine("Memory -> Hinter den '? verstecken sich Symbole, die paarweise vorkommen. Finden Sie diese!");
-            Console.WriteLine("Zum Aufdecken wählen Sie zwei Positionen in der Form: Zeile1Spalte1Zeile2Spalte2.");
+            Console.WriteLine("Memory -> Hinter den '? verstecken sich Symbole, die paarweise vorkommen. Finde diese!");
+            Console.WriteLine("Zum Aufdecken wählst du zwei Positionen in der Form: Zeile1Spalte1Zeile2Spalte2.");
             Console.WriteLine("Z.B.: 2142 deckt das Symbol in Zeile 2 und Spalte 1 auf sowie das Symbol in Zeile 4 u. Spalte2.");
 
             while (continiue == "y" || continiue == "Y")
@@ -79,7 +79,7 @@ namespace Kür_Memory
         static void aufdecken(char[,] gamestate, char[,] memory, ref int tries)
         {
             {
-                Console.WriteLine("Welche stellen möchtest du Aufdecken?");
+                Console.WriteLine("Welche Stellen möchtest du aufdecken?");
                 int input = int.Parse(Console.ReadLine());
                 tries++;
 
@@ -108,13 +108,13 @@ namespace Kür_Memory
 
                     if (erstesSymbol == zweitesSymbol)
                     {
-                        Console.WriteLine("Du hast ein paar gefunden");
+                        Console.WriteLine("Du hast ein Paar gefunden");
                         gamestate[digits[0], digits[1]] = ' ';
                         gamestate[digits[2], digits[3]] = ' ';
                     }
                     else
                     {
-                        Console.WriteLine("Leider kein treffer.");
+                        Console.WriteLine("Leider kein Treffer.");
                         gamestate[digits[0], digits[1]] = '?';
                         gamestate[digits[2], digits[3]] = '?';
                     }
