@@ -12,15 +12,19 @@ namespace Kür_Memory
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
             string continiue = "y";
+            Console.WriteLine("Memory -> Hinter den '? verstecken sich Symbole, die paarweise vorkommen. Finden Sie diese!");
+            Console.WriteLine("Zum Aufdecken wählen Sie zwei Positionen in der Form: Zeile1Spalte1Zeile2Spalte2.");
+            Console.WriteLine("Z.B.: 2142 deckt das Symbol in Zeile 2 und Spalte 1 auf sowie das Symbol in Zeile 4 u. Spalte2.");
 
             while (continiue == "y" || continiue == "Y")
             {
                 char[,] gamestate = GameState();
+                char[,] memory = Memory();
                 int tries = 0;
                 while (!IstSpielBeendet(gamestate))
                 {
                     Print2DArray(gamestate);
-                    aufdecken(gamestate, ref tries);
+                    aufdecken(gamestate, memory, ref tries);
                 }
 
                 Console.Write($"Super, du hast alle Karten in {tries} aufgedeckt, möchtest du nochmal Spielen? (y/n)");
@@ -30,7 +34,38 @@ namespace Kür_Memory
 
         static char[,] Memory()
         {
-            char[,] cards = { { ' ', '1', '2', '3', '4' }, { '1','☯','☸','✈','❀' }, { '2','❤','✌','☸','✌' }, { '3','❀','❤','☺','✵' }, { '4','✵','☯','☺','✈' } };
+            List<char> symbols = new List<char>
+            {
+                '☯','☸','✈','❀',
+                '❤','✌','☸','✌',
+                '❀','❤','☺','✵',
+                '✵','☯','☺','✈'
+            };
+
+            char[,] cards = { { ' ', '1', '2', '3', '4' }, { '1', '?', '?', '?', '?' }, { '2', '?', '?', '?', '?' }, { '3', '?', '?', '?', '?' }, { '4', '?', '?', '?', '?' } };
+
+            Random random = new Random();
+
+            for (int i = symbols.Count - 1; i > 0; i--)
+            {
+                int j = random.Next(i + 1);
+
+                char temp = symbols[i];
+                symbols[i] = symbols[j];
+                symbols[j] = temp;
+            }
+
+            int index = 0;
+
+            for (int i = 1; i < cards.GetLength(0); i++)
+            {
+                for (int j = 1; j < cards.GetLength(1); j++)
+                {
+                    cards[i, j] = symbols[index];
+                    index++;
+                }
+            }
+
             return cards;
         }
 
@@ -41,7 +76,7 @@ namespace Kür_Memory
             return cards;
         }
 
-        static void aufdecken(char[,] gamestate, ref int tries)
+        static void aufdecken(char[,] gamestate, char[,] memory, ref int tries)
         {
             {
                 Console.WriteLine("Welche stellen möchtest du Aufdecken?");
@@ -49,7 +84,7 @@ namespace Kür_Memory
                 tries++;
 
                 int[] digits = GetDigits(input);
-                char[,] memory = Memory();
+                
 
                 if (digits[0] == digits[2] && digits[1] == digits[3])
                 {
