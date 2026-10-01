@@ -51,27 +51,40 @@ namespace Kür_Memory
                 int[] digits = GetDigits(input);
                 char[,] memory = Memory();
 
-                gamestate[digits[0], digits[1]] = memory[digits[0], digits[1]];
-                gamestate[digits[2], digits[3]] = memory[digits[2], digits[3]];
-
-                char erstesSymbol = memory[digits[0], digits[1]];
-                char zweitesSymbol = memory[digits[2], digits[3]];
-
-                Print2DArray(gamestate);
-
-                if (erstesSymbol == zweitesSymbol)
+                if (digits[0] == digits[2] && digits[1] == digits[3])
                 {
-                    Console.WriteLine("Du hast ein paar gefunden");
-                    gamestate[digits[0], digits[1]] = ' ';
-                    gamestate[digits[2], digits[3]] = ' ';
+                    Console.WriteLine("Ungültige Eingabe! 2x die gleiche Position.");
+                    return;
+                }
+                else if (gamestate[digits[0], digits[1]] != '?' || gamestate[digits[2], digits[3]] != '?')
+                {
+                    Console.WriteLine("Ungültiger Versuch! An mindestens einer Position wurde das Symbol bereits aufgedeckt.");
+                    return;
                 }
                 else
                 {
-                    Console.WriteLine("Leider kein treffer.");
-                    gamestate[digits[0], digits[1]] = '?';
-                    gamestate[digits[2], digits[3]] = '?';
+                    gamestate[digits[0], digits[1]] = memory[digits[0], digits[1]];
+                    gamestate[digits[2], digits[3]] = memory[digits[2], digits[3]];
+
+                    char erstesSymbol = memory[digits[0], digits[1]];
+                    char zweitesSymbol = memory[digits[2], digits[3]];
+
+                    Print2DArray(gamestate);
+
+                    if (erstesSymbol == zweitesSymbol)
+                    {
+                        Console.WriteLine("Du hast ein paar gefunden");
+                        gamestate[digits[0], digits[1]] = ' ';
+                        gamestate[digits[2], digits[3]] = ' ';
+                    }
+                    else
+                    {
+                        Console.WriteLine("Leider kein treffer.");
+                        gamestate[digits[0], digits[1]] = '?';
+                        gamestate[digits[2], digits[3]] = '?';
+                    }
+                    IstSpielBeendet(gamestate);
                 }
-                IstSpielBeendet(gamestate);
             }
         }
 
