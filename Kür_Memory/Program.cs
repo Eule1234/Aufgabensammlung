@@ -10,14 +10,28 @@ namespace Kür_Memory
     {
         static void Main(string[] args)
         {
-            Print2DArray(GameState());
-            aufdecken();
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+            char[,] gamestate = GameState();
 
+            string continiue = "y";
+
+            while (continiue == "y" || continiue == "Y")
+            {
+                while (!IstSpielBeendet(gamestate))
+                {
+                    Print2DArray(gamestate);
+                    aufdecken(gamestate);
+                }
+
+                Console.Write("Super, du hast alle Karten aufgedeckt, möchtest du nochmal Spielen? (y/n)");
+                continiue = Console.ReadLine();
+            }
         }
 
-        static void Memory()
+        static char[,] Memory()
         {
-            char[,] cards = { { ' ', '1', '2', '3', '4' }, { '1', '☯', '☸', '✈', '❀' }, { '2', '❤', '✌', '☸', '✌' }, { '3', '❀', '❤', '☺', '✵' }, { '4', '✵', '☯', '☺', '✈' } };
+            char[,] cards = { { ' ', '1', '2', '3', '4' }, { '1','☯','☸','✈','❀' }, { '2','❤','✌','☸','✌' }, { '3','❀','❤','☺','✵' }, { '4','✵','☯','☺','✈' } };
+            return cards;
         }
 
         static char[,] GameState()
@@ -27,33 +41,67 @@ namespace Kür_Memory
             return cards;
         }
 
-        static void aufdecken()
+        static void aufdecken(char[,] gamestate)
         {
-            Console.WriteLine("Welche stellen möchtest du Aufdecken?");
-            int input = int.Parse(Console.ReadLine());
-
-            int[] digits = GetDigits(input);
-
-            foreach (int digit in digits)
             {
-                Console.WriteLine(digit);
+                Console.WriteLine("Welche stellen möchtest du Aufdecken?");
+                int input = int.Parse(Console.ReadLine());
+
+                int[] digits = GetDigits(input);
+                char[,] memory = Memory();
+
+                gamestate[digits[0], digits[1]] = memory[digits[0], digits[1]];
+                gamestate[digits[2], digits[3]] = memory[digits[2], digits[3]];
+
+                char erstesSymbol = memory[digits[0], digits[1]];
+                char zweitesSymbol = memory[digits[2], digits[3]];
+
+                Print2DArray(gamestate);
+
+                if (erstesSymbol == zweitesSymbol)
+                {
+                    Console.WriteLine("Du hast ein paar gefunden");
+                    gamestate[digits[0], digits[1]] = ' ';
+                    gamestate[digits[2], digits[3]] = ' ';
+                }
+                else
+                {
+                    Console.WriteLine("Leider kein treffer.");
+                    gamestate[digits[0], digits[1]] = '?';
+                    gamestate[digits[2], digits[3]] = '?';
+                }
+                IstSpielBeendet(gamestate);
             }
         }
 
-            static int[] GetDigits(int input)
+        static bool IstSpielBeendet(char[,] gamestate)
+        {
+            for (int i = 1; i < gamestate.GetLength(0); i++)
             {
-                List<int> digits = new List<int>();
-
-                while (input != 0)
+                for (int j = 1; j < gamestate.GetLength(1); j++)
                 {
-                    digits.Add(input % 10);
-                    input = input / 10;
+                    if (gamestate[i,j] == '?')
+                    {
+                        return false;
+                    }
                 }
-
-                digits.Reverse();
-
-                return digits.ToArray();
             }
+            return true;
+        }
+        static int[] GetDigits(int input)
+        {
+            List<int> digits = new List<int>();
+
+            while (input != 0)
+            {
+                digits.Add(input % 10);
+                input = input / 10;
+            }
+
+            digits.Reverse();
+
+            return digits.ToArray();
+        }
 
         static void Print2DArray(char[,] array)
         {
