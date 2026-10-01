@@ -104,6 +104,7 @@ namespace Kür_Memory
                     char erstesSymbol = memory[digits[0], digits[1]];
                     char zweitesSymbol = memory[digits[2], digits[3]];
 
+                    Console.Clear(); // damit vorherig aufgedeckte Karten nicht weiter sichtbar sind 
                     Print2DArray(gamestate);
 
                     if (erstesSymbol == zweitesSymbol)
