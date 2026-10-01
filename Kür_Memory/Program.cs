@@ -80,7 +80,14 @@ namespace Kür_Memory
         {
             {
                 Console.WriteLine("Welche Stellen möchtest du aufdecken?");
-                int input = int.Parse(Console.ReadLine());
+                int input = int.Parse(Console.ReadLine()); 
+                
+                if (input.ToString().Length != 4)
+                { 
+                    Console.WriteLine("Ungültige Eingabe! Bitte genau 2 Positionen eingeben (z.B: 1243)");
+                    return;
+                }
+
                 tries++;
 
                 int[] digits = GetDigits(input);
@@ -104,7 +111,7 @@ namespace Kür_Memory
                     char erstesSymbol = memory[digits[0], digits[1]];
                     char zweitesSymbol = memory[digits[2], digits[3]];
 
-                    Console.Clear(); // damit vorherig aufgedeckte Karten nicht weiter sichtbar sind 
+                    Console.Clear(); // damit zuvor aufgedeckte Karten nicht mehr sichtbar sind 
                     Print2DArray(gamestate);
 
                     if (erstesSymbol == zweitesSymbol)
@@ -159,6 +166,8 @@ namespace Kür_Memory
                 Console.WriteLine("[Leeres Array]");
                 return;
             }
+
+            Console.WriteLine(); // ein Abstand macht alles etwas übersichtlicher 
 
             int rows = array.GetLength(0);
             int cols = array.GetLength(1);
