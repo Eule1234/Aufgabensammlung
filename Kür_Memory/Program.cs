@@ -11,19 +11,19 @@ namespace Kür_Memory
         static void Main(string[] args)
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
-            char[,] gamestate = GameState();
-
             string continiue = "y";
 
             while (continiue == "y" || continiue == "Y")
             {
+                char[,] gamestate = GameState();
+                int tries = 0;
                 while (!IstSpielBeendet(gamestate))
                 {
                     Print2DArray(gamestate);
-                    aufdecken(gamestate);
+                    aufdecken(gamestate, ref tries);
                 }
 
-                Console.Write("Super, du hast alle Karten aufgedeckt, möchtest du nochmal Spielen? (y/n)");
+                Console.Write($"Super, du hast alle Karten in {tries} aufgedeckt, möchtest du nochmal Spielen? (y/n)");
                 continiue = Console.ReadLine();
             }
         }
@@ -41,11 +41,12 @@ namespace Kür_Memory
             return cards;
         }
 
-        static void aufdecken(char[,] gamestate)
+        static void aufdecken(char[,] gamestate, ref int tries)
         {
             {
                 Console.WriteLine("Welche stellen möchtest du Aufdecken?");
                 int input = int.Parse(Console.ReadLine());
+                tries++;
 
                 int[] digits = GetDigits(input);
                 char[,] memory = Memory();
