@@ -118,7 +118,6 @@ namespace Kür_Memory
                         gamestate[digits[0], digits[1]] = '?';
                         gamestate[digits[2], digits[3]] = '?';
                     }
-                    IstSpielBeendet(gamestate);
                 }
             }
         }
